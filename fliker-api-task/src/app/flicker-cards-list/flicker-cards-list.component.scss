@@ -1,0 +1,16 @@
+.columns {
+  display: block;
+  text-align: center;
+  padding-top: 20px;
+  .column {
+    width: 33%;
+    display: inline-block;
+  }
+
+  @media screen and (max-width: 475px) {
+    padding: 20px;
+    .column {
+      width: 100%;
+    }
+  }
+}

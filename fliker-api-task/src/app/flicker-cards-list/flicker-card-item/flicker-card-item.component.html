@@ -1,0 +1,21 @@
+<figure class="image is-square">
+  <a (click)="isActive = !isActive">
+    <img [src]="searchItem.url + '_m.jpg'" />
+  </a>
+</figure>
+
+<div class="modal" [class.is-active]="isActive">
+  <div class="modal-background"></div>
+  <div class="modal-content">
+    <p class="has-text-white title has-text-left"> Image Title: {{ searchItem.title }}</p>
+    <p class="has-text-white title has-text-left"> Image Farm: {{ searchItem.farm }}</p>
+    <p class="image">
+      <img [src]="searchItem.url + '_b.jpg'" />
+    </p>
+  </div>
+  <button
+    class="modal-close is-large"
+    aria-label="close"
+    (click)="isActive = false"
+  ></button>
+</div>

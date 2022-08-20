@@ -1,0 +1,21 @@
+<div class="container is-fullhd">
+  <section class="hero is-medium is-info">
+    <div class="hero-body">
+      <div class="container has-text-centered">
+        <p class="title flicker-title">Flicker Search App</p>
+        <p class="subtitle">
+          <search-flicker
+            [page]="page"
+            (searchResult)="getSearchList($event)"
+          ></search-flicker>
+        </p>
+      </div>
+    </div>
+  </section>
+  <flicker-cards-list
+    [searchList]="searchList"
+    infinite-scroll
+    (scrolled)="onScrollDown($event)"
+  >
+  </flicker-cards-list>
+</div>
